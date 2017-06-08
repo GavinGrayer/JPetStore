@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="struts" extends="struts-default">
+	
+	<action name="NewAccountAction" class="com.action.NewAccountAction" method="judge">
+			<result name="success" type="stream">
+				<param name="contentType">text/html;charset=UTF-8</param>
+				<param name="inputName">ajaxInputStream</param>
+				<param name="bufferSize">1024</param>			
+			</result>
+		
+		</action>
+		
+		<action name="RegisterAction" class="com.action.RegisterAction" method="print">
+			<result name="success">/account/SignonForm.jsp</result>
+			<result name="error">/account/NewAccountForm.jsp</result>
+		</action>
+	
+		<action name="LoginAction" class="com.action.loginAction.LoginAction" method="judge">
+			<result name="success">/catalog/Main.jsp</result>
+			<result name="error">/account/SignonForm.jsp</result>
+		</action>
+		
+		<action name="TypeAction" class="com.action.typeAction.TypeAction" method="typeShow">
+			<result name="success">/catalog/Category.jsp</result>
+			<result name="error">/account/SignonForm.jsp</result>
+		</action>
+		
+
+		
+		
+		<action name="ProductToItemAction" class="com.action.ProductToItemAction" method="handle">
+			<result name="success">/catalog/Product.jsp</result>
+			<result name="error">/account/SignonForm.jsp</result>
+		</action>
+		
+		<action name="FindItemByIdAction" class="com.action.FindItemByIdAction" method="itemContext">
+			<result name="success">/catalog/Item.jsp</result>
+			<result name="error">/account/SignonForm.jsp</result>
+		</action>
+		
+		<action name="CartAction" class="com.action.CartAction.CartAction" method="cart">
+			<result name="success">/cart/Cart.jsp</result>
+			<result name="error">/account/SignonForm.jsp</result>
+		</action>
+		
+		
+		<action name="RemoveCartAction" class="com.action.CartAction.RemoveCartAction" method="remove">
+			<result name="success">/cart/Cart.jsp</result>
+			<result name="error">/account/SignonForm.jsp</result>
+		</action>
+		
+		
+		
+		<action name="UpdateCartAction" class="com.action.CartAction.UpdateCartAction" method="updateCart">
+			<result name="success">/cart/Cart.jsp</result>
+			<result name="error">/account/SignonForm.jsp</result>
+		</action>
+		
+		
+		<action name="delCartAction" class="com.action.CartAction.DelCartByItemIdAction" method="delCart">
+			<result name="success">/cart/Cart.jsp</result>
+			<result name="error">/account/SignonForm.jsp</result>
+		</action>
+		
+		
+		
+		<action name="CheckOutAction" class="com.action.PayAction.CheckOutAction" method="check">
+			<result name="success">/cart/Checkout.jsp</result>
+			<result name="error">/account/SignonForm.jsp</result>
+		</action>
+		
+		<action name="OrderAction" class="com.action.OrderAction.OrderAction" method="handleOrder">
+			<result name="success">/order/ShippingForm.jsp</result>
+			<result name="error">/order/ViewOrder.jsp</result>
+		</action>
+		
+		<action name="ShippingFormAction" class="com.action.OrderAction.ShippingFormAction" method="handle">
+			<result name="success">/order/ViewOrder.jsp</result>
+			<result name="error">/order/ViewOrder.jsp</result>
+		</action>
+		
+		
+		<action name="ListOrdersAction" class="com.action.ListOrdersAction.ListOrdersAction" method="query">
+			<result name="success">/order/ListOrders.jsp</result>
+			<result name="error">/order/ViewOrder.jsp</result>
+		</action>
+		
+		<action name="EditAccountAction" class="com.action.EditAccountAction" method="update">
+			<result name="success">/catalog/Main.jsp</result>
+			<result name="error">/order/ViewOrder.jsp</result>
+		</action>
+		
+
+		
+		
+	</package>
+	
+	
+
+</struts>
+
+

@@ -1,0 +1,22 @@
+#
+#Tue Jan 17 13:42:39 CST 2017
+genBasicCompId=false
+sessionFactoryName=com.hibernate.HibernateSessionFactory
+profile=
+daoSFId=
+version=3.1
+jndiPath=
+detectM2M=false
+reStrategyClass=
+springDaoFile=
+useJavaTypes=true
+keyGenerator=native
+libInstallFolder=WebRoot/WEB-INF/lib
+addLibs2Project=true
+genVersionTag=false
+sessionFactoryId=
+basePersistenceClass=
+reSettingsFile=
+configFile=/JPetStore2/src/hibernate.cfg.xml
+createConfigFile=true
+addLibs2Classpath=true
